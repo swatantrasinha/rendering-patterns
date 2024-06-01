@@ -63,7 +63,8 @@ Steps for Installation:
 <h2>CSR and SSR</h2>
 In a Next JS App we if dont use getServerSideProps --> it acts as CSR (same as a basic React App)
 In this repo see HomePage and TodoItems link output is same as below <br/>
-![CSR-SSR](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/with-pre-render-ssr.png)
+
+![CSRAndSSr](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/CSR-and-SSR.png)
 
 See in code
 ### Home Page - SSR (using getServerSideProps)
