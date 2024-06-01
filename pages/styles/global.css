@@ -1,0 +1,101 @@
+body {
+    background-color: #fafafa;
+}
+
+header,footer {
+    background-color: #000;
+    height: 10vh;
+    color: #fff;
+}
+header, footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+}
+main {
+    height: 55vh;
+    overflow: auto;
+    padding: 30px;;
+}
+
+nav ul {
+    width: fit-content;
+    display: flex;
+    height: 100%;
+}
+
+nav ul li {
+    padding-left: 30px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff  
+}
+
+nav ul li a:hover {
+    font-size: 2rem;
+}
+
+nav ul li.active {
+    font-size: 1.2rem;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.back-to-users, .back-to-blogs {
+    text-decoration: underline;
+    cursor: pointer;
+    color: blue;
+}
+.user-data {
+    background-color: #f1f1f1;
+    border: 1px solid black;
+    width: fit-content;
+    border-radius: 4px;
+    padding: 50px;
+    margin: 50px;
+}
+
+.user-label {
+    display: inline-block;
+    color: blueviolet;
+}
+
+.user-value {
+    font-family: cursive;
+}
+
+.user-adress {
+    display: flex;  
+}
+
+.user-address-fields {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-address-field {
+    display: flex;
+}
+
+.user-address-value {
+    display: inline-block;
+}
+
+.navigate-button {
+    background-color: rgb(255, 195, 86);
+    border-radius: 24px;
+    padding: 10px;
+    width: 750px;
+}
+
+.navigate-button:hover {
+    background-color: #fff;
+    font-size: 1.5rem;
+    padding: 0;
+}
