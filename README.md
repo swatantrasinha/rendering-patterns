@@ -145,8 +145,15 @@ export default index
 
 <details>
   <summary>SSG - Static Site Generation </summary>
-
- 
+Whenever we request a url to our Next Server then it generates a HTML everytime and sends to client as response.
+  If web app is getting too many request then this kind of operations becomes heavier on server and this might lead to memeory errors.
+  So to this problem we have **SSG approacht**  
+  <br />
+  Love ** is ** bold
+<br/>
+  
+Build Command - next build
+getStaticProps
   </details>
 
 
