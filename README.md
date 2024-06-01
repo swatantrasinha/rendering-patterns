@@ -34,6 +34,15 @@ Steps for Installation:
 - Initial App Load Shows Blank Screen  <br/>
 - The first HTML file sent was not pre-render from server <br/>
 
+<ins> Simple React App </ins>
+1. Server sends HTML file to client (browser)
+2. Browser receives HTML file with
+<div id="root">
+  // empty
+</div>
+
+3. After client is hydrated with JS, our react code runs and then it fills the empty space.
+
 ![image](https://github.com/swatantrasinha/rendering-patterns/assets/62704756/aa564c0e-843f-4ef0-a18a-c85900b733c7)
 
 
