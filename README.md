@@ -30,20 +30,33 @@ Steps for Installation:
 
 <h2>Pre-rendering</h2>
 
-<h3> <ins> Non-PreRender </ins> </h3>
+<h3> <ins> Case1 : Non-PreRender </ins> </h3>
 - Initial App Load Shows Blank Screen  <br/>
 - The first HTML file sent was not pre-render from server <br/>
 
 <ins> Simple React App </ins>
 1. Server sends HTML file to client (browser)
 2. Browser receives HTML file with
+
+```html
 <div id="root">
   // empty
 </div>
-
+```
 3. After client is hydrated with JS, our react code runs and then it fills the empty space.
 
-![image](https://github.com/swatantrasinha/rendering-patterns/assets/62704756/aa564c0e-843f-4ef0-a18a-c85900b733c7)
+![React JS: CSR](https://github.com/swatantrasinha/rendering-patterns/assets/62704756/aa564c0e-843f-4ef0-a18a-c85900b733c7)
 
+
+<h3> <ins> Case2 : With Pre-render </ins> </h3>
+- Initial App Load Shows Some Text on Screen  <br/>
+- The first HTML file sent was pre-render from server <br/>
+
+<ins> Next JS App </ins>
+
+1. Server sends HTML file to client (browser)
+2. Browser receives complete HTML file to display on screen
+3. After client is hydrated with JS, app becones interactive
+![Next JS: SSR](https://github.com/swatantrasinha/rendering-patterns/assets/62704756/aa564c0e-843f-4ef0-a18a-c85900b733c7)
 
 
