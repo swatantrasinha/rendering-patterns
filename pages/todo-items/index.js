@@ -7,7 +7,7 @@ const index = () => {
         const response = await fetch('https://dummyjson.com/todos')
         const data = await response.json()
          const fiveTodosItems= data.todos.splice(0,5)
-        setTodoItems(fiveTodosItems);
+         setTodoItems(fiveTodosItems);
     }
     useEffect(() => {
         getTodoItemsList();
