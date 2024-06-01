@@ -60,3 +60,79 @@ Steps for Installation:
 ![Next JS: SSR](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/with-pre-render-ssr.png)
 
 
+<h2>CSR and SSR</h2>
+In a Next JS App we if dont use getServerSideProps --> it acts as CSR (same as a basic React App)
+In this repo see HomePage and TodoItems link output is same as below
+
+See in code
+### Home Page - SSR (using getServerSideProps)
+```javascript
+import React from 'react';
+
+export async function getServerSideProps() {
+    const response = await fetch('https://dummyjson.com/todos')
+    const data = await response.json()
+    const fiveTodosItems= data.todos.splice(0,5)
+   
+    return {
+      props: {
+        todoItems: fiveTodosItems
+      }
+    }
+  }
+
+const LandingPage = (props) =>  {
+  const {todoItems} = props;
+    return (
+        <div>
+          <hr />
+          <h3>Todo List By SSR is :</h3>
+          {todoItems && todoItems.length && todoItems.map((ele,index) => {
+        const uniqueKey= `${index}`;
+        return (<div> {ele.todo}</div>)
+       })}
+        <hr />
+      </div>
+    )
+}
+
+export default LandingPage;
+```
+
+### Todo_Items Page - CSR  (not using getServerSideProps)
+```javascript
+import React,{useState, useEffect} from 'react'
+
+const index = () => {
+    const [todoItems, setTodoItems] = useState([]);
+
+    const  getTodoItemsList= async() => {
+        const response = await fetch('https://dummyjson.com/todos')
+        const data = await response.json()
+         const fiveTodosItems= data.todos.splice(0,5)
+         setTodoItems(fiveTodosItems);
+    }
+    useEffect(() => {
+        getTodoItemsList();
+    }, [])
+    
+  return (
+    <div>
+          <hr />
+        <h3>Todo List By CSR is :</h3>
+       {todoItems && todoItems.length && todoItems.map((ele,index) => {
+        const uniqueKey= `${index}`;
+        return (<div> {ele.todo}</div>)
+       })}
+        <hr />
+      </div>
+  )
+}
+
+export default index
+```
+
+
+
+
+
