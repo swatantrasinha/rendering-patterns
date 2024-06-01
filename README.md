@@ -4,7 +4,7 @@ Video Tutorial Link :
 1. https://www.youtube.com/watch?v=qwhMyVVnmKM&t=394s
 2. https://www.youtube.com/watch?v=fRgAI3FiYHc&list=PLe3J6mZBq1xVDr297Yg0p1SHbdj_Oceld&index=5
 
-<details>
+<details open>
   <summary>Steps for Installation: </summary>
 
 - npm init -y
@@ -30,7 +30,7 @@ Video Tutorial Link :
   <li> ISSR</li>
 </ol>
 
-<details>
+<details open>
   <summary><h2>Pre-rendering</h2> </summary>
 
 
@@ -64,7 +64,7 @@ Video Tutorial Link :
 ![Next JS: SSR](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/with-pre-render-ssr.png)
 </details>
 
-<details>
+<details open>
   <summary><h2>CSR and SSR</h2> </summary>
 
 In a Next JS App we if dont use getServerSideProps --> it acts as CSR (same as a basic React App)
