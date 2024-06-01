@@ -143,6 +143,11 @@ export default index
 </details>
 
 
+<details>
+  <summary>SSG - Static Site Generation </summary>
+
+ 
+  </details>
 
 
 
