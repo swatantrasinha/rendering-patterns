@@ -1,3 +1,4 @@
+
 Video Tutorial Link : 
 1. https://www.youtube.com/watch?v=qwhMyVVnmKM&t=394s
 2. https://www.youtube.com/watch?v=fRgAI3FiYHc&list=PLe3J6mZBq1xVDr297Yg0p1SHbdj_Oceld&index=5
@@ -30,8 +31,9 @@ inside pages folder add files index.js and return some jsx
 
 <h3> <ins> Non-PreRender </ins> </h3>
 - Initial App Load Shows Blank Screen  <br/>
-- The first HTML file sent was not pre-render from server
-![Image](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/non-pre-render.png)
+- The first HTML file sent was not pre-render from server <br/>
+
+![image](https://github.com/swatantrasinha/rendering-patterns/assets/62704756/aa564c0e-843f-4ef0-a18a-c85900b733c7)
 
 
 
