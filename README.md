@@ -15,7 +15,8 @@ Video Tutorial Link :
     "dev" : "next dev",  
     "build" : "next build",  
     "start" : "next start",  
-    "lint": "next lint"  
+    "lint": "next lint",
+    "export" : "next build && next export"  
   },  
 - npm run dev
 </details>
@@ -147,12 +148,22 @@ export default index
   <summary>SSG - Static Site Generation </summary>
 Whenever we request a url to our Next Server then it generates a HTML everytime and sends to client as response.
   If web app is getting too many request then this kind of operations becomes heavier on server and this might lead to memeory errors.
-  So to this problem we have <b> <ins> SSG approach </ins> </b>
+  So to this problem we have <b> <ins> SSG approach </ins> </b> where we will build the whole HTML once only during build time and we will deploy that build on server.
   <br />
 
   
-<ins>Build Command </ins> - next build
-getStaticProps
+<ins>Build Command </ins> - next build --> create .next folder
+<ins>Export Command </ins> - next export --> create out folder
+
+1. SSG without Data
+   We have funcion -> getStaticProps
+If we already have .next folder then delete it and then run npm run export <br/> 
+we will get error page with getServeSideProps cannot be exported <br/>
+remember: we have used getServeSideProps for SSR in  - index.js <br/>
+Also note : getServeSideProps - is meant to generate HTML at run time and not at build time <br />
+So to make SSG we need some change
+
+
   </details>
 
 
