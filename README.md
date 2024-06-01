@@ -56,13 +56,14 @@ Steps for Installation:
 
 1. Server sends HTML file to client (browser)
 2. Browser receives complete HTML file to display on screen
-3. After client is hydrated with JS, app becones interactive
+3. After client is hydrated with JS, app becones interactive <br/>
 ![Next JS: SSR](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/with-pre-render-ssr.png)
 
 
 <h2>CSR and SSR</h2>
 In a Next JS App we if dont use getServerSideProps --> it acts as CSR (same as a basic React App)
-In this repo see HomePage and TodoItems link output is same as below
+In this repo see HomePage and TodoItems link output is same as below <br/>
+![CSR-SSR](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/with-pre-render-ssr.png)
 
 See in code
 ### Home Page - SSR (using getServerSideProps)
