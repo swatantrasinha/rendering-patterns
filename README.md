@@ -45,7 +45,7 @@ Steps for Installation:
 ```
 3. After client is hydrated with JS, our react code runs and then it fills the empty space.
 
-![React JS: CSR](https://github.com/swatantrasinha/rendering-patterns/assets/62704756/aa564c0e-843f-4ef0-a18a-c85900b733c7)
+![React JS: CSR](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/non-pre-render.png)
 
 
 <h3> <ins> Case2 : With Pre-render </ins> </h3>
@@ -57,6 +57,6 @@ Steps for Installation:
 1. Server sends HTML file to client (browser)
 2. Browser receives complete HTML file to display on screen
 3. After client is hydrated with JS, app becones interactive
-![Next JS: SSR](https://github.com/swatantrasinha/rendering-patterns/assets/62704756/aa564c0e-843f-4ef0-a18a-c85900b733c7)
+![Next JS: SSR](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/with-pre-render-ssr.png)
 
 
