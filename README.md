@@ -32,7 +32,7 @@ Video Tutorial Link :
 </ol>
 
 <details>
-  <summary><h2>Pre-rendering</h2> </summary>
+  <summary>Pre-rendering </summary>
 
   <h3> <ins> Case1 : Non-PreRender </ins> </h3>
 - Initial App Load Shows Blank Screen  <br/>
@@ -62,10 +62,11 @@ Video Tutorial Link :
 2. Browser receives complete HTML file to display on screen
 3. After client is hydrated with JS, app becones interactive <br/>
 ![Next JS: SSR](https://github.com/swatantrasinha/rendering-patterns/blob/main/screenshots/with-pre-render-ssr.png)
+
 </details>
 
 <details>
-  <summary><h2>CSR and SSR</h2> </summary>
+  <summary>CSR and SSR</summary>
 
 In a Next JS App we if dont use getServerSideProps --> it acts as CSR (same as a basic React App)
 In this repo see HomePage and TodoItems link output is same as below <br/>
