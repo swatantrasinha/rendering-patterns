@@ -298,7 +298,7 @@ Here the html genrated will not have data instantly it will have HTML with some 
 <details>
   <summary>ISR - Incremental Site Regenaration </summary>
   
-</details>details>
+</details>
   
 
 
