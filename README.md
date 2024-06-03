@@ -208,10 +208,52 @@ We can see its successful
   
 <details>
   <summary>2. SSG with  data </summary>
+  Lets see the case where we need HTML with data populated from API
+  So instead of getServerSideProps in case of SSR, we will now use getStaticProps <br/>
+https://nextjs.org/docs/pages/building-your-application/data-fetching/get-static-props   <br/>
+The docs in link above says - "If you export a function called getStaticProps (Static Site Generation) from a page, Next.js will pre-render this page at build time using the props returned by getStaticProps."
+
+```javascript
+import React from 'react';
+export async function getStaticProps(context) {
+    const response = await fetch('https://dummyjson.com/todos')
+    const data = await response.json()
+    const fiveTodosItems= data.todos.splice(0,5)
+   
+    return {
+      props: {
+        todoItems: fiveTodosItems
+      }
+    }
+  }
+
+const LandingPage = (props) =>  {
+  const {todoItems} = props;
+  
+    return (
+        <div>
+          <hr />
+          <h3>Todo List By SSR is :</h3>
+          {todoItems && todoItems.length && todoItems.map((ele,index) => {
+        const uniqueKey= `${index}`;
+        return (<div> {ele.todo}</div>)
+       })}
+        <hr />
+      </div>
+    )
+}
+export default LandingPage;
+```
+Now if we run  : npm run export  <br />
+It will show -> Export successful. <br />
+
+
 </details>
 
 <details>
   <summary>3. SSG with fetch data on client </summary>
+
+
 </details>
 
 
