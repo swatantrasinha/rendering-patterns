@@ -155,7 +155,7 @@ Whenever we request a url to our Next Server then it generates a HTML everytime 
 <ins>Build Command </ins> - next build --> create .next folder <br />
 <ins>Export Command </ins> - next export --> create out folder <br />
 
-1. SSG without Data
+
 We saw how to implement SSR using funcion -> getStaticProps <br />
 Let try to build and export now <br />
 When we build - in creates .next folder where all JS chunks are there <br />
@@ -168,16 +168,32 @@ We will get error as - Error: Error for page /: pages with `getServerSideProps` 
 
 <ins> Also note </ins> : getServeSideProps - is meant to generate HTML at run time and not at build time <br />
 So to make SSG we need some change- Now what changes to be made depends on 3 scenarios
-- SSG with no data <br />
+
+<details>
+  <summary>1. SSG without Data </summary>
+
+Lets make below changes in pages folder => index.js (parallel to _app.js)
+<br />
+We will remove all data fetching changes and will only keep some hardcode data
 
 ```javascript
   import React from 'react';
   const LandingPage = (props) =>  {
+  const todoItems = [
+    {id: 1, todo: 'Get up Early'},
+    {id: 2, todo: 'DO Some Exercise'},
+    {id: 3, todo: 'Read a Book'}
+  ];
   
     return (
         <div>
           <hr />
-          <h3>Todo List </h3>
+          <h3>Todo List By SSR is :</h3>
+            {todoItems && todoItems.length && todoItems.map((ele,index) => {
+              const uniqueKey= `${index}`;
+              return (<div> {ele.todo}</div>)
+             })}
+        <hr />
       </div>
     )
 }
@@ -187,11 +203,16 @@ export default LandingPage;
 Now if we do:   npm run export 
 We can see its successful
 
-- SSG with  data
-- SSG with fetch data on client
   <br />
+  </details>
   
+<details>
+  <summary>2. SSG with  data </summary>
+</details>
 
+<details>
+  <summary>3. SSG with fetch data on client </summary>
+</details>
 
 
   </details>
