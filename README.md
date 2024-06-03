@@ -169,6 +169,23 @@ We will get error as - Error: Error for page /: pages with `getServerSideProps` 
 <ins> Also note </ins> : getServeSideProps - is meant to generate HTML at run time and not at build time <br />
 So to make SSG we need some change- Now what changes to be made depends on 3 scenarios
 - SSG with no data
+  ```javascript
+  import React from 'react';
+const LandingPage = (props) =>  {
+  
+    return (
+        <div>
+          <hr />
+          <h3>Todo List </h3>
+      </div>
+    )
+}
+
+export default LandingPage;
+```
+Now if we do:   npm run export
+We can see its successful
+
 - SSG with  data
 - SSG with fetch data on client
   <br />
