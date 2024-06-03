@@ -29,7 +29,7 @@ Video Tutorial Link :
   <li> CSR</li>
   <li> SSR</li>
   <li> SSG</li>
-  <li> ISSR</li>
+  <li> ISR</li>
 </ol>
 
 <details>
@@ -293,9 +293,13 @@ we can see - Export successful <br />
 Here the html genrated will not have data instantly it will have HTML with some loaded and once API call is done data will come.
 
 </details>
-
-
   </details>
+
+<details>
+  <summary>ISR - Incremental Site Regenaration </summary>
+  
+</details>details>
+  
 
 
 
