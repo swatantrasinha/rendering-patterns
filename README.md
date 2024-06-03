@@ -246,12 +246,15 @@ export default LandingPage;
 ```
 Now if we run  : npm run export  <br />
 It will show -> Export successful. <br />
-
-
+Note: Build time in this case is high
+To reduce build time and also to get data from server lets see the below case 
 </details>
 
 <details>
   <summary>3. SSG with fetch data on client </summary>
+
+Here also we will generatic Static Site only with data. The key difference is data will be fetched on client instead of server.
+This will help in reducing build time unlike above case where we fetched data from server and it caused increased build time.
 
 
 </details>
