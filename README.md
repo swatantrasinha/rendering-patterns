@@ -188,7 +188,7 @@ We will remove all data fetching changes and will only keep some hardcode data
     return (
         <div>
           <hr />
-          <h3>Todo List By SSR is :</h3>
+          <h3>Todo List - SSG without fetching data  is below :</h3>
             {todoItems && todoItems.length && todoItems.map((ele,index) => {
               const uniqueKey= `${index}`;
               return (<div> {ele.todo}</div>)
@@ -233,7 +233,7 @@ const LandingPage = (props) =>  {
     return (
         <div>
           <hr />
-          <h3>Todo List By SSR is :</h3>
+          <h3>Todo List - SSG by fetching data from server is :</h3>
           {todoItems && todoItems.length && todoItems.map((ele,index) => {
         const uniqueKey= `${index}`;
         return (<div> {ele.todo}</div>)
@@ -250,12 +250,47 @@ Note: Build time in this case is high
 To reduce build time and also to get data from server lets see the below case 
 </details>
 
+
 <details>
   <summary>3. SSG with fetch data on client </summary>
+  Here instead of fetching data on server we will fetch in client
+  
 
-Here also we will generatic Static Site only with data. The key difference is data will be fetched on client instead of server.
-This will help in reducing build time unlike above case where we fetched data from server and it caused increased build time.
+```javascript
+import React,{useState, useEffect} from 'react';
 
+const LandingPage = (props) =>  {
+  const [todoItems, setTodoItems] = useState([]);
+
+    const fetchDataClientSide = async() => {
+    const response = await fetch('https://dummyjson.com/todos')
+    const data = await response.json()
+    const fiveTodosItems= data.todos.splice(0,5)
+    setTodoItems(fiveTodosItems);
+  }
+
+  useEffect(() => {
+    fetchDataClientSide();
+  }, [])
+  
+  
+    return (
+        <div>
+          <hr />
+          <h3>Todo List - SSG by fetching data from client is :</h3>
+          {todoItems && todoItems.length && todoItems.map((ele,index) => {
+        const uniqueKey= `${index}`;
+        return (<div> {ele.todo}</div>)
+       })}
+        <hr />
+      </div>
+    )
+}
+export default LandingPage;
+```
+if we do : npm run export  <br/>
+we can see - Export successful <br />
+Here the html genrated will not have data instantly it will have HTML with some loaded and once API call is done data will come.
 
 </details>
 
