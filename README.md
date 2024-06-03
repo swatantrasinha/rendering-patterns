@@ -152,15 +152,19 @@ Whenever we request a url to our Next Server then it generates a HTML everytime 
   <br />
 
   
-<ins>Build Command </ins> - next build --> create .next folder
-<ins>Export Command </ins> - next export --> create out folder
+<ins>Build Command </ins> - next build --> create .next folder <br />
+<ins>Export Command </ins> - next export --> create out folder <br />
 
 1. SSG without Data
-   We have funcion -> getStaticProps
-If we already have .next folder then delete it and then run npm run export <br/> 
-we will get error page with getServeSideProps cannot be exported <br/>
-remember: we have used getServeSideProps for SSR in  - index.js <br/>
-Also note : getServeSideProps - is meant to generate HTML at run time and not at build time <br />
+We saw how to implement SSR using funcion -> getStaticProps
+Let try to build and  export now 
+If we already have .next folder then delete it and then run npm run export <br/>
+
+We will get error as - Error: Error for page /: pages with `getServerSideProps` can not be exported. <br/>
+
+<ins>Remember </ins> :  We have used getServeSideProps for SSR in  - index.js <br/>
+
+<ins> Also note </ins> : getServeSideProps - is meant to generate HTML at run time and not at build time <br />
 So to make SSG we need some change
 
 
